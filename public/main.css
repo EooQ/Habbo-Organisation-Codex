@@ -1,0 +1,319 @@
+/* Main CSS */
+/* (c) Johnbc3 */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+html {
+	font-family: sans-serif;
+	color: #FFFFFF;
+}
+
+body {
+	margin: 0;
+	background-color: var(--bg);
+	transition: 0.5s;
+}
+
+/* Variables */
+
+:root {
+  --primary: #134175;
+  --secondary: #206DC5;
+  --tertiary: #DDDDDD;
+  --bg: #28252E;
+}
+
+/* Navigation */
+
+.navcontainer {
+	overflow: hidden;
+	background-color: #1A1B20;
+	border-bottom: 3px solid var(--secondary);
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav {
+	margin-left: 14%;
+}
+
+.nav a,
+.navcontainer p {
+	float: left;
+	display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+.nav a {
+	transition: all .5s;
+	height: 100%;
+	font-size: 1.25em;
+	background-size: 100%;
+	padding: 27.5px 12px;
+}
+
+.nav a:hover {
+	color: var(--secondary);
+}
+
+.navcontainer .logo {
+	float: left;
+	margin: 0px;
+	font-weight: bold;
+	font-size: 2.5em;
+	padding: 15px 0px;
+	padding-left: 25px;
+	position: absolute;
+}
+
+#right {
+	float: right;
+}
+
+ul.nav {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0 0 0 14%;
+}
+
+ul.nav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Header */
+
+.header img {
+	display: block;
+    margin: 3% auto;
+    width: 20%;
+}
+
+/* Content */
+
+.container h3 {
+	text-align: center;
+}
+
+.container {
+	margin: 0 15%;
+}
+
+.container .toc {
+	margin: 1em;
+}
+
+/* Org Content */
+
+.content {
+	display: block;
+	padding: 1em;
+	line-height: 1.75em;
+	margin-left: 10vw;
+}
+
+.content h2 {
+	text-align: center;
+}
+
+.content p {
+	display: block;
+}
+
+.infobox {
+	margin: 1em;
+	position: relative;
+	float: right;
+	border: 1px solid #A2A9B1;
+	width: 20%;
+	font-size: 80%;
+	padding: 1em;
+}
+
+.infobox caption {
+	font-size: 125%;
+	font-weight: bold;
+	padding: 0.2em;
+}
+
+.infobox tr {
+	line-height: 1.5em;
+}
+
+.infobox a {
+	text-decoration: none;
+	color: var(--secondary);
+}
+
+.infobox a:hover {
+	text-decoration: underline;
+}
+
+.info p {
+	display: inline-block
+}
+
+.infobox td, th {
+	text-align: left;
+	display: table-cell;
+}
+
+.infobox th {
+	vertical-align: top;
+}
+
+.toc {
+	border: 1px solid #A2A9B1;
+	display: table;
+}
+
+.toc ul {
+	list-style: none;
+	padding: .5em;
+}
+
+.toc .sub {
+	padding-left: 1.5em;
+}
+
+.toctitle {
+	text-align: center;
+}
+
+.toc a {
+	color: var(--secondary);
+	text-decoration: none;
+}
+
+.toc a:hover {
+	text-decoration: underline;
+}
+
+.toc .number {
+	padding-right: 1em;
+	color: #FFF;
+	display: table-cell;
+}
+
+.toc a.number:hover {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#toc-left {
+	float: left;
+}
+
+#toc-right {
+	float: right;
+}
+
+@media screen and (max-width: 1200px) {
+	.container .toc {
+		width: 100%;
+	}
+	#toc-right, #toc-left {
+		float: none;
+	}
+}
+
+.content h2 {
+	text-align: left;
+}
+
+.sectionheader {
+	border-bottom: 1px solid #A2A9B1;
+	padding: 0.5em 0;
+}
+
+.subsectionheader {
+	padding: 0.5em 0;
+}
+
+/* Mobile Optimization */
+
+#mobilebtn {
+	font-size: 2em;
+	padding: 16px 2%;
+	display: none;
+	cursor: pointer;
+	float: right;
+}
+
+@media screen and (max-width: 900px) {
+  ul.nav li:not(:first-child) {
+  	display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+	.nav {
+		margin: 0;
+	}
+	#right {
+		float: left;
+	}
+	#mobilebtn {
+		display: block;
+		position: absolute;
+    	right: 0;
+    	top: 0;
+	}
+	ul.nav.responsive {
+		position: relative;
+	}
+  	ul.nav.responsive li, .nav a {
+    	float: none;
+    	display: inline;
+  	}
+  	ul.nav.responsive li a {
+    	display: block;
+    	text-align: left;
+  	}
+  	.container {
+  		margin: 0 10%;
+  	}
+
+}
+
+@media screen and (max-width: 550px) {
+	.logo {
+		visibility: hidden;
+	}
+	ul.nav {
+		margin: 0;
+	}
+}
+
+/* Copyright/Footer */
+
+.copyright	{
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	padding: 1em 0;
+	border-top: 1px solid #444;
+	color: #A39FB1;
+}
+.copyright .footer {
+	font-family: "Roboto";
+	font-size: .8em;
+	width: 70%;
+	padding: 5px 15%;
+	line-height: 2;
+}
+
+@media screen and (max-width: 900px) {
+	.copyright {
+  		position: relative;
+  	}
+  	.copyright .footer {
+  		width: 100%;
+  		padding: 5px;
+  		line-height: 1.25;
+  	}
+}
